@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {{#each css}}
+        <link rel="stylesheet" href="/css/{{this}}">
+    {{/each}}
+    
+        <link rel="stylesheet" href="/base.css">
+        <style>
+            body{
+                text-align: center;
+            }
+            form {
+                display: inline-flex;
+            }
+            .content-wrapper{
+                background-color: rgba(255, 255, 255, 0.527);
+                padding: 15px;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 25px;
+            }
+        </style>
+</head>
+<body>
+
+<div class="content-wrapper">
+<h1>Welcome to the cookie factory</h1>
+
+<br/>
+    <form action="/login" method="post">
+    <table>
+        <tr>
+            <td colspan="2"> <h1>Login Now</h1></td>
+        </tr>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input id="username" class="username" type="text" name="username" /></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input id="password" class="password" type="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <button type="submit">Login</button></td>
+        </tr>
+    </table>
+    </form>
+<br/>
+<br/>
+    <form action="/register" method="post">
+    <table>
+        <tr>
+            <td colspan="2"> <h1>Register</h1></td>
+        </tr>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input id="username2" class="username" type="text" name="username" /></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input id="password2" class="password" type="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <button type="submit">Register</button></td>
+        </tr>
+    </table>
+    </form>
+<br/>
+<br/>
+<br/>
+    <div>
+        <h3>{{{message}}}</h3>
+    </div>
+    </div>
+</body>
+</html>
